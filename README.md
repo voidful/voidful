@@ -4,5 +4,7 @@
 - 💬 Ask me about NLP & AIDev
 - 🕸️ Here is my blog: https://blog.voidful.tech
 
-![GitHub followers](https://img.shields.io/github/followers/Voidful?style=social)
+![Github stats](https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true)
 
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=voidful)
