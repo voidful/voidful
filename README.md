@@ -9,5 +9,4 @@
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=voidful)
 
-
-![Visitor Count](https://profile-counter.glitch.me/voidful/count.svg)
+![Visitor Count](https://badges.pufler.dev/visits/voidful/git-badges)
