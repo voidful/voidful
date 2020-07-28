@@ -6,7 +6,4 @@
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true)
 
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=voidful)
-
 ![Visitor Count](https://badges.pufler.dev/visits/voidful/git-badges)
