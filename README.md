@@ -6,4 +6,4 @@
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true)
 
-![Visitor Count](https://badges.pufler.dev/visits/voidful/git-badges)
+![Visitor Count](https://komarev.com/ghpvc/?username=voidful&color=grey)
