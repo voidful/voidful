@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working NLPrep TFkit nlp2go
+- 🔭 I’m currently working nlprep tfkit nlp2go
 - 💬 Ask me about NLP & ML DevOPs
 - 🕸️ I share what I have learnt in my blog : https://voidful.tech
   and Medium: https://medium.com/@voidful.stack
