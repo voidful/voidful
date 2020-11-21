@@ -1,9 +1,10 @@
-### Hi there 👋
+<h1 align="center">Hi there 👋</h1>
+<h3 align="center">NLP | Deep Learning | Python</h3>  
 
-- 🔭 I’m currently working nlprep tfkit nlp2go
+- 🔭 I’m currently working sustainable nlp - nlprep tfkit nlp2go
 - 💬 Ask me about NLP & ML DevOPs
-- 🕸️ I share what I have learnt in my blog : https://voidful.tech
-  and Medium: https://medium.com/@voidful.stack
+- 🕸️ I share what I have learnt in my [blog](https://voidful.tech)
+  and [Medium](https://medium.com/@voidful.stack)
 
 * Research Interests
     * Unsupervised/Semi-Supervised Representation Learning
