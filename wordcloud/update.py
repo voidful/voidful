@@ -18,14 +18,14 @@ def read_url_data(open_url):
 
 daily_trending = json.loads(read_url_data("https://trendings.herokuapp.com/repo?lang=python&since=daily"))
 trending = ""
-for t in daily_trending['items']:
+for t in daily_trending['items'][:3]:
     url = t['repo_link'].replace('https://github.com/', 'https://raw.githubusercontent.com/')
     trending += read_url_data(url + "/main/README.md")
     trending += read_url_data(url + "/master/README.md")
 print("Finish fetching repos")
 
 phraseg = Phraseg(trending, idf_chunk=20000)
-result = phraseg.extract(result_word_minlen=2)
+result = phraseg.extract(result_word_minlen=1)
 
 wordcloud = WordCloud(font_path='wordcloud/NotoSansCJKtc-Medium.otf', width=1800, height=1000, margin=1,
                       background_color="white").fit_words(result)
