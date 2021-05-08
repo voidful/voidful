@@ -22,5 +22,5 @@
 <div align="center">
   
   ## Python Daily Top3 Trending On GitHub using phraseg
-  <img src="https://raw.githubusercontent.com/voidful/voidful/master/wordcloud/wordcloud.png" alt="WordCloud" width="70%">
+  <img src="https://raw.githubusercontent.com/voidful/voidful/word-cloud/wordcloud/wordcloud.png" alt="WordCloud" width="70%">
 </div>
