@@ -18,3 +18,9 @@
 ![Github stats](https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true)
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=voidful&color=grey)
+
+<div align="center">
+  
+  ## Python Daily Trending On Github using phraseg
+  <img src="https://raw.githubusercontent.com/voidful/voidful/master/wordcloud/wordcloud.png" alt="WordCloud" width="70%">
+</div>
