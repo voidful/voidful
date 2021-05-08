@@ -25,7 +25,7 @@ for t in daily_trending['items'][:3]:
 print("Finish fetching repos")
 
 phraseg = Phraseg(trending, idf_chunk=20000)
-result = phraseg.extract(result_word_minlen=1)
+result = phraseg.extract(result_word_minlen=2)
 
 wordcloud = WordCloud(font_path='wordcloud/NotoSansCJKtc-Medium.otf', width=1800, height=1000, margin=1,
                       background_color="white").fit_words(result)
