@@ -1,20 +1,15 @@
-<h1 align="center">Hi there 👋</h1>
-<h3 align="center">NLP | Deep Learning | Python</h3>  
+<h1 align="center">Hi there <img src="https://i.giphy.com/YqFACC5oHsyy3l31k1.gif" width="40px" /></h1>
 
-- 🔭 I’m currently working sustainable nlp - nlprep tfkit nlp2go
-- 💬 Ask me about NLP & ML DevOPs
-- 🕸️ I share what I have learnt in my [blog](https://voidful.tech)
-  and [Medium](https://medium.com/@voidful.stack)
+- 🌱 This is the place where I open source stuff and exchange ideas.
+- 💬 Ask me about natural language processing, deep learning, ml, development thinking
+- 👯 I’m looking to collaborate on anything free and open source
 
 * Research Interests
-    * Unsupervised/Semi-Supervised Representation Learning
+    * Self-Supervised Representation Learning
     * Text Generation
     * Machine Reading Comprehension
     * Automatic Speech Recognition
-    
-* Actively looking for Research Opportunities.
-
-
+  
 ![Github stats](https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true)
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=voidful&color=grey)
@@ -24,3 +19,7 @@
   ## Python Daily Top3 Trending On GitHub using phraseg
   <img src="https://raw.githubusercontent.com/voidful/voidful/word-cloud/wordcloud/wordcloud.png" alt="WordCloud" width="70%">
 </div>
+
+----------
+| &nbsp;&nbsp;&nbsp;  [Website](https://voidful.tech) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; [Medium](https://medium.com/@voidful.stack) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Open Source Work : <sub>&#9660; &#9660; &#9660;</sub>
+

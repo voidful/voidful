@@ -24,11 +24,11 @@ for t in daily_trending['items'][:3]:
     trending += read_url_data(url + "/master/README.md")
 print("Finish fetching repos")
 
-phraseg = Phraseg(trending, idf_chunk=20000)
+phraseg = Phraseg(trending, idf_chunk=len(trending)/3)
 result = phraseg.extract(result_word_minlen=2)
 
 wordcloud = WordCloud(font_path='wordcloud/NotoSansCJKtc-Medium.otf', width=1800, height=1000, margin=1,
                       background_color="white").fit_words(result)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.savefig('wordcloud/wordcloud.png', bbox_inches='tight', pad_inches=0)
+plt.savefig('./wordcloud/wordcloud.png', bbox_inches='tight', pad_inches=0)
