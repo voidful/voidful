@@ -3,6 +3,7 @@ from phraseg import *
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import matplotlib as mpl
+import csv
 
 mpl.rcParams['figure.dpi'] = 300
 
@@ -18,14 +19,20 @@ def read_url_data(open_url):
 
 daily_trending = json.loads(read_url_data("https://trendings.herokuapp.com/repo?lang=python&since=daily"))
 trending = ""
+trending_repo = []
 for t in daily_trending['items'][:3]:
     url = t['repo_link'].replace('https://github.com/', 'https://raw.githubusercontent.com/')
     trending += read_url_data(url + "/main/README.md")
     trending += read_url_data(url + "/master/README.md")
+    trending_repo.append([t['repo'], t['repo_link']])
 print("Finish fetching repos")
 
-phraseg = Phraseg(trending, idf_chunk=len(trending)/3)
-result = phraseg.extract(result_word_minlen=2)
+with open('./wordcloud/trending.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(trending_repo)
+
+phraseg = Phraseg(trending, idf_chunk=len(trending) / 3)
+result = phraseg.extract(result_word_minlen=1, merge_overlap=True)
 
 wordcloud = WordCloud(font_path='wordcloud/NotoSansCJKtc-Medium.otf', width=1800, height=1000, margin=1,
                       background_color="white").fit_words(result)
