@@ -19,7 +19,7 @@
 
 <div align="center">
 
-  ## [Python Daily Top3 Trending On GitHub](https://raw.githubusercontent.com/voidful/voidful/word-cloud/wordcloud/trending.csv) using [phraseg](https://github.com/voidful/Phraseg)
+  ## Arxiv CS.CL Daily Update using [phraseg](https://github.com/voidful/Phraseg)
   <img src="https://raw.githubusercontent.com/voidful/voidful/word-cloud/wordcloud/wordcloud.png" alt="WordCloud" width="70%">
 
 </div>

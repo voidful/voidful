@@ -4,34 +4,21 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import matplotlib as mpl
 import csv
+import arxivpy
 
 mpl.rcParams['figure.dpi'] = 300
 
+articles = arxivpy.query(search_query=['cs.CL'],
+                         start_index=0, max_index=500, results_per_iteration=100,
+                         wait_time=1.0, sort_by='lastUpdatedDate')
 
-def read_url_data(open_url):
-    try:
-        with urllib.request.urlopen(open_url) as url:
-            decoded_text = url.read().decode()
-            return decoded_text
-    except:
-        return ""
+datas = ""
+for a in articles:
+    datas += a['title'] + "\n"
+    datas += a['abstract'] + "\n"
+print("Finish fetching")
 
-
-daily_trending = json.loads(read_url_data("https://trendings.herokuapp.com/repo?lang=python&since=daily"))
-trending = ""
-trending_repo = []
-for t in daily_trending['items'][:3]:
-    url = t['repo_link'].replace('https://github.com/', 'https://raw.githubusercontent.com/')
-    trending += read_url_data(url + "/main/README.md")
-    trending += read_url_data(url + "/master/README.md")
-    trending_repo.append([t['repo'], t['repo_link']])
-print("Finish fetching repos")
-
-with open('./wordcloud/trending.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerows(trending_repo)
-
-phraseg = Phraseg(trending, idf_chunk=len(trending) / 3)
+phraseg = Phraseg(datas, idf_chunk=300)
 result = phraseg.extract(result_word_minlen=1, merge_overlap=True)
 
 wordcloud = WordCloud(font_path='wordcloud/NotoSansCJKtc-Medium.otf', width=1800, height=1000, margin=1,
