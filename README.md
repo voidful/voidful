@@ -25,5 +25,5 @@
 </div>
 
 ----------
-| &nbsp;&nbsp;&nbsp;  [Website](https://voidful.dev) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; [Medium](https://medium.com/@voidful.stack) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Open Source Work : <sub>&#9660; &#9660; &#9660;</sub>
+| &nbsp;&nbsp;&nbsp;  [Website](https://voidful.dev) &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; [Medium](https://voidful.medium.com) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Open Source Work : <sub>&#9660; &#9660; &#9660;</sub>
 
