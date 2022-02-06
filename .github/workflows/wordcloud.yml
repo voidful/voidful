@@ -51,3 +51,5 @@ jobs:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: word-cloud
           force: true
+          
+      - uses: gautamkrishnar/keepalive-workflow@master
