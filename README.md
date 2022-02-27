@@ -12,7 +12,7 @@
   
 
 <img  src="https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true&hide_border=true&card_width=300" width="48%" align="right" >
-<img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=voidful&layout=compact&hide=html,css,scss&hide_title=true&hide_border=true" width="48%" >
+<img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=voidful&layout=compact&hide=html,css,scss,jupyter%20notebook&hide_title=true&hide_border=true" width="48%" >
 
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=voidful&color=grey)
