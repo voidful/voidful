@@ -1,4 +1,4 @@
-<h1 align="center">Hi there <img src="https://i.giphy.com/YqFACC5oHsyy3l31k1.gif" width="40px" /></h1>
+<h1 align="center">Hi there <img src="https://i.giphy.com/YqFACC5oHsyy3l31k1.gif" width="40" /></h1>
 
 - 🌱 This is the place where I open source stuff and exchange ideas.
 - 💬 Ask me about natural language processing, deep learning, ml, development thinking
