@@ -5,7 +5,6 @@
 </p>
 
 - 🚀 Discover my open-source projects and engage in exciting conversations!
-- 💡 Inquire about natural language processing, deep learning, machine learning, and development thinking.
 - 🤝 Seeking collaboration on free and open-source initiatives.
 
 **Research Interests:**
