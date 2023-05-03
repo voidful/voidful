@@ -19,6 +19,8 @@
   <img align="center" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=voidful&theme=default" width="48%" >
 </p>
 
+![voidful github-stats](https://stats.hyochan.dev/api/github-stats?login=voidful)
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=voidful&color=grey" alt="Visitor Count">
 </p>
