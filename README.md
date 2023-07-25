@@ -1,8 +1,4 @@
-<h1 align="center">👋 Welcome to My World! <img src="https://i.giphy.com/YqFACC5oHsyy3l31k1.gif" width="40" /></h1>
-
-<p align="center">
-  <i>Sharing knowledge and ideas while building a better future, together.</i>
-</p>
+<h2 align="center">Sharing Knowledge and Ideas While Building a Better Future, Together.</h2>
 
 - 🚀 Discover my open-source projects and engage in exciting conversations!
 - 🤝 Seeking collaboration on free and open-source initiatives.
@@ -19,12 +15,6 @@
   <img align="center" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=voidful&theme=default" width="48%" >
 </p>
 
-![voidful github-stats](https://stats.hyochan.dev/api/github-stats?login=voidful)
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=voidful&color=grey" alt="Visitor Count">
-</p>
-
 <div align="center">
 
 ## Stay Updated with Arxiv CS.CL Daily Digest using [phraseg](https://github.com/voidful/Phraseg)
@@ -39,4 +29,9 @@
   <a href="https://huggingface.co/voidful">Huggingface</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://voidful.medium.com">Medium</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   Explore My Open Source Work: <sub>&#9660; &#9660; &#9660;</sub>
+</p>
+
+
+<p align="center">
+   <img src="https://komarev.com/ghpvc/?username=voidful&color=grey" alt="Visitor Count">
 </p>
