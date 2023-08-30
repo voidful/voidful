@@ -11,7 +11,7 @@
 - Side Project [Cipher](https://github.com/voidful/Cipher), [CryptoTA](https://github.com/voidful/CryptoTA), [SnapShare](https://github.com/voidful/SnapShare), [react-media-viewer](https://github.com/voidful/react-media-viewer)
 
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_title=true&hide_border=true&card_width=300" width="48%" >
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&include_all_commits=true&rank_icon=percentile&role=OWNER%2CORGANIZATION_MEMBER%2CCOLLABORATOR&card_width=300" width="48%" >
   <img align="center" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=voidful&theme=default" width="48%" >
 </p>
 
