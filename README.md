@@ -8,7 +8,7 @@
 - Multilingual Speech Recognition [SpeechMix](https://github.com/voidful/SpeechMix), [ASR-Training](https://github.com/voidful/asr-training), [ASR-LiveDemo](https://github.com/voidful/whisper-live-asr-demo), [asrp](https://github.com/voidful/asrp)
 - Self-Supervised Representation Learning [TFKit](https://github.com/voidful/TFkit)
 - Development Tools [aidev](https://github.com/voidful/aidev), [DevLEGO](https://github.com/voidful/DevLEGO)
-- Side Project [Cipher](https://github.com/voidful/Cipher), [CryptoTA](https://github.com/voidful/CryptoTA), [SnapShare](https://github.com/voidful/SnapShare), [react-media-viewer](https://github.com/voidful/react-media-viewer)
+- Side Project [Cipher](https://github.com/voidful/Cipher), [FTA](https://github.com/voidful/FTA), [SnapShare](https://github.com/voidful/SnapShare), [react-media-viewer](https://github.com/voidful/react-media-viewer)
 
 <p align="center">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&include_all_commits=true&rank_icon=percentile&role=OWNER%2CORGANIZATION_MEMBER%2CCOLLABORATOR&card_width=300" width="48%" >
