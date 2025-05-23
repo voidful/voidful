@@ -5,14 +5,15 @@ on:
     branches:
       - master
   schedule:
-    - cron: '00 02 * * *'
+    - cron: '00 02 * * *' 
 
 permissions:
-  contents: write  # 授予 GITHUB_TOKEN 寫入權限
+  contents: write  
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,20 +29,21 @@ jobs:
           pip install phraseg wordcloud
           pip install git+https://github.com/titipata/arxivpy
 
-      - name: Update data
+      - name: Update data and generate wordcloud
         run: |
           python wordcloud/update.py
 
-      - name: Commit and push changes
+      - name: Commit and push changes to word-cloud branch
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add --all
+          git add .
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "✅ No changes to commit."
           else
-            git commit -m "Add changes"
-            git push origin word-cloud --force
+            git commit -m "🔄 Update wordcloud data [auto-commit]"
+            git push origin HEAD:word-cloud --force
           fi
 
-      - uses: gautamkrishnar/keepalive-workflow@master
+      - name: Keep workflow alive
+        uses: gautamkrishnar/keepalive-workflow@master
