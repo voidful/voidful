@@ -7,12 +7,14 @@ on:
   schedule:
     - cron: '00 02 * * *'
 
+permissions:
+  contents: write  # 授予 GITHUB_TOKEN 寫入權限
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Build 🔧
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python 3.8
@@ -30,26 +32,16 @@ jobs:
         run: |
           python wordcloud/update.py
 
-      - name: Commit files
-        id: commit
+      - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "github-actions"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add --all
-          if [-z "$(git status --porcelain)"]; then
-             echo "::set-output name=push::false"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
           else
-             git commit -m "Add changes" -a
-             echo "::set-output name=push::true"
+            git commit -m "Add changes"
+            git push origin word-cloud --force
           fi
-        shell: bash
 
-      - name: Push changes
-        if: steps.commit.outputs.push == 'true'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          branch: word-cloud
-          force: true
-          
       - uses: gautamkrishnar/keepalive-workflow@master
