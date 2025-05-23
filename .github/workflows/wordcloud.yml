@@ -8,15 +8,17 @@ on:
     - cron: '00 02 * * *'
 
 permissions:
-  contents: write    
+  contents: write    # 讓 GITHUB_TOKEN 擁有寫入儲存庫內容的權限
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (full history)
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0     # 取回所有 commit 與所有分支歷史
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
@@ -42,6 +44,9 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Add changes"
+            # 先抓取遠端 word-cloud 分支最新狀態（若不存在也不會失敗）
+            git fetch origin word-cloud:word-cloud || true
+            # 再強制推送 HEAD 到遠端 word-cloud
             git push origin HEAD:word-cloud --force-with-lease
           fi
 
@@ -49,7 +54,7 @@ jobs:
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     permissions:
-      actions: write    
+      actions: write    # 授權此 job 重新啟用被停用的排程
     steps:
       - name: Keep workflow alive
         uses: liskin/gh-workflow-keepalive@v1
