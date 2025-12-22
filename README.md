@@ -11,7 +11,7 @@
 - Side Project [Cipher](https://github.com/voidful/Cipher), [FTA](https://github.com/voidful/FTA), [SnapShare](https://github.com/voidful/SnapShare), [react-media-viewer](https://github.com/voidful/react-media-viewer)
 
 <p align="center">
-  <img align="center" src="https://gitroll.io/api/badges/profiles/v1/uMQOmTaSIW8T8I9bX4Biv1m5vUY43" width="60%">
+  <a href="https://gitroll.io/profile/uMQOmTaSIW8T8I9bX4Biv1m5vUY43" target="_blank"><img src="https://gitroll.io/api/badges/profiles/v1/uMQOmTaSIW8T8I9bX4Biv1m5vUY43?theme=light" alt="GitRoll Profile Badge" width="60%"/></a>
 </p>
 
 <div align="center">
