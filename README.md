@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://gitroll.io/profile/uMQOmTaSIW8T8I9bX4Biv1m5vUY43" target="_blank"><img src="https://gitroll.io/api/badges/profiles/v1/uMQOmTaSIW8T8I9bX4Biv1m5vUY43?theme=light" alt="GitRoll Profile Badge" width="45%"/></a>
-  <img src="https://github-readme-stats.vercel.app/api?username=voidful&show_icons=true&hide_border=true" alt="Github Readme Stats" width="45%"/></a>
+  <img src="https://raw.githubusercontent.com/voidful/github-status/main/generated/status.gif" alt="Github Readme Stats" width="45%"/></a>
 </p>
 
 <div align="center">
