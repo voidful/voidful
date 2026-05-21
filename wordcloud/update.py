@@ -1,16 +1,14 @@
-import urllib.request, json
 from phraseg import *
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import matplotlib as mpl
-import csv
-import arxivpy
+import arxivapi
 
 mpl.rcParams['figure.dpi'] = 300
 
-articles = arxivpy.query(search_query=['cs.CL'],
-                         start_index=0, max_index=500, results_per_iteration=100,
-                         wait_time=1.0, sort_by='lastUpdatedDate')
+articles = arxivapi.query(search_query=['cs.CL'],
+                          start_index=0, max_index=500, results_per_iteration=500,
+                          wait_time=3.0, sort_by='lastUpdatedDate')
 
 datas = ""
 for a in articles:
