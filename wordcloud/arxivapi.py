@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import socket
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -15,6 +16,10 @@ _USER_AGENT = "voidful-wordcloud/1.0 (+https://github.com/voidful/voidful)"
 _WHITESPACE = re.compile(r"\s+")
 _SORT_CRITERIA = {"lastUpdatedDate", "submittedDate", "relevance"}
 _MAX_PAGE_SIZE = 2000
+
+
+class ArxivAPIUnavailable(RuntimeError):
+    """Raised when arXiv cannot be reached after retrying transient failures."""
 
 
 def query(
@@ -124,26 +129,31 @@ def _fetch_page(
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 return response.read()
         except urllib.error.HTTPError as error:
-            if not _should_retry_http(error.code, attempt, retries):
-                raise
-            _sleep_before_retry(error, attempt, wait_time)
-        except (TimeoutError, urllib.error.URLError, socket.timeout):
+            if _should_retry_http(error.code, attempt, retries):
+                _sleep_before_retry(error, attempt, wait_time, retries)
+                continue
+            if error.code == 429 or 500 <= error.code < 600:
+                _raise_unavailable(error)
+            raise
+        except (TimeoutError, urllib.error.URLError, socket.timeout) as error:
             if attempt >= retries:
-                raise
-            _sleep_before_retry(None, attempt, wait_time)
+                raise ArxivAPIUnavailable("arXiv API request failed after retries") from error
+            _sleep_before_retry(None, attempt, wait_time, retries)
 
-    raise RuntimeError("arXiv page fetch failed without an exception")
-
-
-def _should_retry_http(status_code: int, attempt: int, retries: int) -> bool:
-    return attempt < retries and (status_code == 429 or 500 <= status_code < 600)
+    raise ArxivAPIUnavailable("arXiv API request failed after retries")
 
 
-def _sleep_before_retry(
+def _raise_unavailable(error: urllib.error.HTTPError) -> None:
+    raise ArxivAPIUnavailable(
+        f"arXiv API returned HTTP {error.code} after retries"
+    ) from error
+
+
+def _retry_delay(
     error: urllib.error.HTTPError | None,
     attempt: int,
     wait_time: float,
-) -> None:
+) -> float:
     retry_after = None
     if error is not None:
         retry_after = error.headers.get("Retry-After")
@@ -158,7 +168,30 @@ def _sleep_before_retry(
     except ValueError:
         delay = wait_time * (attempt + 1)
 
-    time.sleep(max(delay, wait_time, 1.0))
+    return max(delay, wait_time, 1.0)
+
+
+def _sleep_before_retry(
+    error: urllib.error.HTTPError | None,
+    attempt: int,
+    wait_time: float,
+    retries: int,
+) -> None:
+    delay = _retry_delay(error, attempt, wait_time)
+    if error is None:
+        reason = "network error"
+    else:
+        reason = f"HTTP {error.code}"
+
+    print(
+        f"arXiv API {reason}; retry {attempt + 1}/{retries} in {delay:.0f}s",
+        file=sys.stderr,
+    )
+    time.sleep(delay)
+
+
+def _should_retry_http(status_code: int, attempt: int, retries: int) -> bool:
+    return attempt < retries and (status_code == 429 or 500 <= status_code < 600)
 
 
 def _parse_page(page: bytes) -> list[dict[str, str]]:

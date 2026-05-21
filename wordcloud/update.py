@@ -1,3 +1,5 @@
+import sys
+
 from phraseg import *
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -6,9 +8,17 @@ import arxivapi
 
 mpl.rcParams['figure.dpi'] = 300
 
-articles = arxivapi.query(search_query=['cs.CL'],
-                          start_index=0, max_index=500, results_per_iteration=500,
-                          wait_time=3.0, sort_by='lastUpdatedDate')
+try:
+    articles = arxivapi.query(search_query=['cs.CL'],
+                              start_index=0, max_index=500, results_per_iteration=500,
+                              wait_time=3.0, sort_by='lastUpdatedDate')
+except arxivapi.ArxivAPIUnavailable as error:
+    print(f"Skip wordcloud update: {error}", file=sys.stderr)
+    sys.exit(0)
+
+if not articles:
+    print("Skip wordcloud update: arXiv returned no articles", file=sys.stderr)
+    sys.exit(0)
 
 datas = ""
 for a in articles:
