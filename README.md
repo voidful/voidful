@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/voidful">Huggingface</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://voidful.medium.com">Medium</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://voidful.bobaboba.me">Donate/支持</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   Explore My Open Source Work: <sub>&#9660; &#9660; &#9660;</sub>
 </p>
 
